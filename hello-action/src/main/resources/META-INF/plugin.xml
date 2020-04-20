@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>com.luamas.idea.plugin.helloaction</id>
+    <name>HelloAction</name>
+    <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
+
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <group id="Luamas.HelloActionMenu" text="欢迎">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+<!--            这里如果类级别覆盖了text字段会优先使用类内部的text内容-->
+            <action id="Luamas.HelloActionMenu.Textboxes" class="com.luamas.idea.plugin.helloaction.HelloAction" text="子插件"/>
+        </group>
+    </actions>
+</idea-plugin>
