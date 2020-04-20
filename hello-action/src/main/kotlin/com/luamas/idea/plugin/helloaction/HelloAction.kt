@@ -9,7 +9,7 @@ class HelloAction : AnAction() {
         val project = event.project
         Messages.showMessageDialog(
             project,
-            "这是我的第一个自定义插件",
+            "第一个自定义插件",
             "欢迎标题",
             Messages.getInformationIcon()
         )

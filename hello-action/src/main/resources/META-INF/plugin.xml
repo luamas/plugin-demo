@@ -14,10 +14,11 @@
 
     <actions>
         <!-- Add your actions here -->
-        <group id="Luamas.HelloActionMenu" text="欢迎">
+        <group id="Luamas.HelloActionMenu" text="自定义插件">
             <add-to-group group-id="MainMenu" anchor="last"/>
 <!--            这里如果类级别覆盖了text字段会优先使用类内部的text内容-->
-            <action id="Luamas.HelloActionMenu.Textboxes" class="com.luamas.idea.plugin.helloaction.HelloAction" text="子插件"/>
+            <action id="Luamas.HelloActionMenu.Hello" class="com.luamas.idea.plugin.helloaction.HelloAction" text="欢迎"/>
+            <action id="Luamas.HelloActionMenu.ProjectInfo" class="com.luamas.idea.plugin.helloaction.ProjectInfoAction" text="项目信息"/>
         </group>
     </actions>
 </idea-plugin>
