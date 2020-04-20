@@ -20,5 +20,28 @@
             <action id="Luamas.HelloActionMenu.Hello" class="com.luamas.idea.plugin.helloaction.HelloAction" text="欢迎"/>
             <action id="Luamas.HelloActionMenu.ProjectInfo" class="com.luamas.idea.plugin.helloaction.ProjectInfoAction" text="项目信息"/>
         </group>
+        <action id="Luamas.EditorIllustrationAction"
+                class="com.luamas.idea.plugin.helloaction.EditorIllustrationAction"
+                text="替换文本"
+                description="替换选定文本"
+                icon="EditorBasicsIcons.Sdk_default_icon">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+        <action id="Luamas.EditorHandlerIllustration"
+                class="com.luamas.idea.plugin.helloaction.EditorHandlerIllustration"
+                text="添加插入符号"
+                description="在现有插入符号的下面添加第二个插入符号。"
+                icon="EditorBasicsIcons.Sdk_default_icon">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+        <!-- 将此项放在弹出菜单的第一个位置；如果项目和编辑器打开，则始终启用此项 -->
+        <action id="Luamas.LogicalPositionIllustration"
+                class="com.luamas.idea.plugin.helloaction.EditorAreaIllustration"
+                text="插入符号位置"
+                description="报告插入符号位置的信息。"
+                icon="EditorBasicsIcons.Sdk_default_icon">
+            <keyboard-shortcut keymap="$default" first-keystroke="control alt G"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
     </actions>
 </idea-plugin>
