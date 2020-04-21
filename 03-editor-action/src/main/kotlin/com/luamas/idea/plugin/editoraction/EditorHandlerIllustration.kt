@@ -1,4 +1,4 @@
-package com.luamas.idea.plugin.helloaction
+package com.luamas.idea.plugin.editoraction
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent

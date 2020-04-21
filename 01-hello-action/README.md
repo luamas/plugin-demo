@@ -1,4 +1,4 @@
-# 此示例讲解了action的基础
+# Action基础
 
 ## HelloAction 简单示例
 

@@ -1,4 +1,4 @@
-package com.luamas.idea.plugin.helloaction
+package com.luamas.idea.plugin.editoraction
 
 import com.intellij.codeInsight.editorActions.TypedHandlerDelegate
 import com.intellij.openapi.command.WriteCommandAction

@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.luamas.idea.plugin.helloaction</id>
+    <id>com.luamas.idea.plugin.editoraction</id>
     <name>EditorAction</name>
     <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
 
@@ -10,19 +10,19 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- 扩展输入程序，当输入的时候会自动处理-->
-        <typedHandler implementation="com.luamas.idea.plugin.helloaction.MyTypedHandler"/>
+        <typedHandler implementation="com.luamas.idea.plugin.editoraction.MyTypedHandler"/>
     </extensions>
 
     <actions>
         <action id="Luamas.EditorIllustrationAction"
-                class="com.luamas.idea.plugin.helloaction.EditorIllustrationAction"
+                class="com.luamas.idea.plugin.editoraction.EditorIllustrationAction"
                 text="替换文本"
                 description="替换选定文本"
                 icon="SdkIcons.Sdk_default_icon">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
         <action id="Luamas.EditorHandlerIllustration"
-                class="com.luamas.idea.plugin.helloaction.EditorHandlerIllustration"
+                class="com.luamas.idea.plugin.editoraction.EditorHandlerIllustration"
                 text="添加插入符号"
                 description="在现有插入符号的下面添加第二个插入符号。"
                 icon="SdkIcons.Sdk_default_icon">
@@ -30,7 +30,7 @@
         </action>
         <!-- 将此项放在弹出菜单的第一个位置；如果项目和编辑器打开，则始终启用此项 -->
         <action id="Luamas.LogicalPositionIllustration"
-                class="com.luamas.idea.plugin.helloaction.EditorAreaIllustration"
+                class="com.luamas.idea.plugin.editoraction.EditorAreaIllustration"
                 text="插入符号位置"
                 description="报告插入符号位置的信息。"
                 icon="SdkIcons.Sdk_default_icon">
