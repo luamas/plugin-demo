@@ -4,7 +4,7 @@ plugins {
 }
 intellij {
     version = "2019.3.4"
-//    plugins = arrayOf("java")
+    setPlugins("java")
     sameSinceUntilBuild = true
 }
 tasks.getByName<org.jetbrains.intellij.tasks.PatchPluginXmlTask>("patchPluginXml") {
