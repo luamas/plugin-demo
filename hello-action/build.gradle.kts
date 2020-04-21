@@ -9,5 +9,5 @@ tasks.getByName<org.jetbrains.intellij.tasks.PatchPluginXmlTask>("patchPluginXml
     changeNotes("""
       <h1>Hello Action</h1>
       <em>Init</em>""")
-    description("""Hello Action demo""")
+    pluginDescription("""Hello Action demo""")
 }
