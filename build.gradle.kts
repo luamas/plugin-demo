@@ -12,7 +12,9 @@ subprojects {
         mavenCentral()
     }
     dependencies {
-        implementation(kotlin("stdlib-jdk8"))
+        implementation(kotlin("stdlib-jdk8") as String){
+            exclude(module="annotations")
+        }
         testCompile("junit", "junit", "4.12")
     }
 
