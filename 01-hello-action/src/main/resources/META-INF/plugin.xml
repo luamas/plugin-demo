@@ -1,0 +1,21 @@
+<idea-plugin>
+    <id>com.luamas.idea.plugin.helloaction</id>
+    <name>HelloAction</name>
+    <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
+
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <group id="Luamas.HelloActionMenu" text="自定义插件">
+            将action增加到主菜单
+            <add-to-group group-id="MainMenu" anchor="last"/>
+<!--            这里如果类级别覆盖了text字段会优先使用类内部的text内容-->
+            <action id="Luamas.HelloActionMenu.Hello" class="com.luamas.idea.plugin.helloaction.HelloAction" text="欢迎" icon="SdkIcons.Sdk_default_icon"/>
+            <action id="Luamas.HelloActionMenu.ProjectInfo" class="com.luamas.idea.plugin.helloaction.ProjectInfoAction" text="项目名称和编辑器内容" icon="SdkIcons.Sdk_default_icon"/>
+        </group>
+    </actions>
+
+</idea-plugin>

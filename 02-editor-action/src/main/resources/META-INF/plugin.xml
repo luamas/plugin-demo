@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.luamas.idea.plugin.helloaction</id>
-    <name>HelloAction</name>
+    <name>EditorAction</name>
     <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
 
 
@@ -9,19 +9,11 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
         <!-- 扩展输入程序，当输入的时候会自动处理-->
         <typedHandler implementation="com.luamas.idea.plugin.helloaction.MyTypedHandler"/>
     </extensions>
 
     <actions>
-        <!-- Add your actions here -->
-        <group id="Luamas.HelloActionMenu" text="自定义插件">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-<!--            这里如果类级别覆盖了text字段会优先使用类内部的text内容-->
-            <action id="Luamas.HelloActionMenu.Hello" class="com.luamas.idea.plugin.helloaction.HelloAction" text="欢迎"/>
-            <action id="Luamas.HelloActionMenu.ProjectInfo" class="com.luamas.idea.plugin.helloaction.ProjectInfoAction" text="项目信息"/>
-        </group>
         <action id="Luamas.EditorIllustrationAction"
                 class="com.luamas.idea.plugin.helloaction.EditorIllustrationAction"
                 text="替换文本"
