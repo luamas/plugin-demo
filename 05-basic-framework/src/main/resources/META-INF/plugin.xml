@@ -1,0 +1,11 @@
+<idea-plugin>
+    <id>com.luamas.idea.plugin.basicframework</id>
+    <name>Basic Facet</name>
+    <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
+
+    <depends>com.intellij.modules.lang</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- 注册自定义FrameworkType扩展 -->
+        <framework.type implementation="com.luamas.idea.plugin.basicframework.DemoFramework"/>
+    </extensions>
+</idea-plugin>
