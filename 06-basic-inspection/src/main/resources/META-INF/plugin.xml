@@ -1,0 +1,36 @@
+<idea-plugin>
+    <id>com.luamas.idea.plugin.basicinspection</id>
+    <name>Basic Facet</name>
+    <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
+
+    <depends>com.intellij.modules.lang</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <!--  Extend the IntelliJ Platform local inspection type, and connect it to the implementation class
+           in this plugin.
+           <localInspection> type element is applied within the scope of a file under edit.
+               It is preferred over <inspectionToolProvider>
+               @see intellij.platform.resources.LangExtensionPoints
+               @see com.intellij.codeInspection.InspectionProfileEntry
+           Attributes:
+             language= Language ID
+             shortName= Not specified, will be computed by the underlying implementation classes.
+             displayName= The string to be shown in the Preferences | Editor | Inspections panel
+                 The displayName gets registered to identify this inspection.
+                 Can be localized using key= and bundle= attributes instead.
+             groupPath= Defines the outermost grouping for this inspection in
+                 the Preferences | Editor | Inspections panel. Not localized.
+             groupName= The subgroup containing this inspection. Not localized.
+             enabledByDefault= Inspection state when Inspections panel is created.
+             level= The default level of error found by this inspection, e.g. INFO, ERROR, etc.
+                 @see com.intellij.codeHighlighting.HighlightDisplayLevel
+             implementationClass= FQN of inspection implementation
+            -->
+        <localInspection language="TEXT"
+                         displayName="显示名称"
+                         groupName="组名称"
+                         groupPath="分组路径"
+                         enabledByDefault="true"
+                         level="WARNING"
+                         implementationClass="com.luamas.idea.plugin.basicinspection.DemoCodeInspection"/>
+    </extensions>
+</idea-plugin>
