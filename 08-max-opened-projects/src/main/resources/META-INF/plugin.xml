@@ -1,0 +1,16 @@
+<idea-plugin>
+    <id>com.luamas.idea.plugin.livetemplates</id>
+    <name>Basic Facet</name>
+    <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <project-components>
+        <component>
+            <implementation-class>com.luamas.idea.plugin.maxopenedprojects.MaxProject</implementation-class>
+        </component>
+    </project-components>
+    <extensions defaultExtensionNs="com.intellij">
+        <applicationService serviceInterface="com.luamas.idea.plugin.maxopenedprojects.MyCounter"
+                            serviceImplementation="com.luamas.idea.plugin.maxopenedprojects.MyCounter"/>
+    </extensions>
+</idea-plugin>
