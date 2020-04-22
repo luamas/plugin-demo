@@ -29,8 +29,8 @@ class MaxProject(project: Project?) : ProjectComponent {
         val commandCounter = ServiceManager.getService(MyCounter::class.java)
         if (commandCounter.increaseCounter() === -1) {
             Messages.showMessageDialog(
-                "打开的项目的最大数目超过 " + java.lang.String.valueOf(commandCounter.maxCount) +
-                        " 项目!", "错误", Messages.getErrorIcon()
+                "打开的项目的最大数目超过" + java.lang.String.valueOf(commandCounter.maxCount) +
+                        "个项目!", "错误", Messages.getErrorIcon()
             )
             val projectManager = ProjectManager.getInstance()
             val allProjects = projectManager.openProjects
