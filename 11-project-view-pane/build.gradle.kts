@@ -3,14 +3,12 @@ plugins {
     id("org.jetbrains.intellij") version intellijVersion
 }
 intellij {
-    version = "2019.3.4"
+    version = "2020.1"
     sameSinceUntilBuild = true
-    setPlugins("java")
-//    type = "IU"
 }
 tasks.getByName<org.jetbrains.intellij.tasks.PatchPluginXmlTask>("patchPluginXml") {
     changeNotes("""
-      <h1>Model</h1>
+      <h1>Project View Pane</h1>
       <em>Init</em>""")
-    pluginDescription("""Model Demo""")
+    pluginDescription("""Project View Pane Demo""")
 }

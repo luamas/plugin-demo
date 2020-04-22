@@ -1,4 +1,4 @@
-package com.luamas.idea.plugin.model
+package com.luamas.idea.plugin.projectmodel
 
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent

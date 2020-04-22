@@ -1,0 +1,10 @@
+<idea-plugin>
+    <id>com.luamas.idea.plugin.projectviewpane</id>
+    <name>Project Model</name>
+    <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <projectViewPane implementation="com.luamas.idea.plugin.projectviewpane.ImagesProjectViewPane"/>
+    </extensions>
+</idea-plugin>

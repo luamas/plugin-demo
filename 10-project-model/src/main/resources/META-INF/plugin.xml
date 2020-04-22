@@ -1,35 +1,35 @@
 <idea-plugin>
-    <id>com.luamas.idea.plugin.model</id>
+    <id>com.luamas.idea.plugin.projectmodel</id>
     <name>Project Model</name>
     <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
 
     <depends>com.intellij.modules.java</depends>
     <actions>
-        <action id="ProjectModel.SourceRoots" class="com.luamas.idea.plugin.model.ShowSourceRootsActions"
+        <action id="ProjectModel.SourceRoots" class="com.luamas.idea.plugin.projectmodel.ShowSourceRootsActions"
                 text="显示源码路径"
                 description="说明如何获取源码路径">
             <!-- 添加到"主菜单-工具菜单"中的第一项 -->
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
-        <action id="ProjectModel.ProjectSdk" class="com.luamas.idea.plugin.model.ProjectSdkAction"
+        <action id="ProjectModel.ProjectSdk" class="com.luamas.idea.plugin.projectmodel.ProjectSdkAction"
                 text="修改Sdk信息"
                 description="说明如何获取Sdk信息">
             <!-- 添加到"主菜单-工具菜单"中的ProjectModel.SourceRoots的后面 -->
             <add-to-group group-id="ToolsMenu" anchor="after" relative-to-action="ProjectModel.SourceRoots"/>
         </action>
         <action id="ProjectModel.ProjectFileIndex"
-                class="com.luamas.idea.plugin.model.ProjectFileIndexSampleAction"
+                class="com.luamas.idea.plugin.projectmodel.ProjectFileIndexSampleAction"
                 text="FileProjectIndex在Action"
                 description="说明如何获取源码路径">
             <!-- 添加到"编辑弹出菜单"(即右键)中的最后一项 -->
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </action>
-        <action id="ProjectModel.ModificationAction" class="com.luamas.idea.plugin.model.ModificationAction"
+        <action id="ProjectModel.ModificationAction" class="com.luamas.idea.plugin.projectmodel.ModificationAction"
                 text="在Action中修改项目"
                 description="说明如何获取源码路径">
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </action>
-        <action id="ProjectModel.LibrariesAction" class="com.luamas.idea.plugin.model.LibrariesAction"
+        <action id="ProjectModel.LibrariesAction" class="com.luamas.idea.plugin.projectmodel.LibrariesAction"
                 text="文件库"
                 description="说明访问库">
             <!-- 添加到"编辑弹出菜单"(即右键)中的最后一项 -->
