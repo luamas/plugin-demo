@@ -18,8 +18,9 @@ class ModificationAction : AnAction() {
             val virtualFile = file.virtualFile ?: return
             val fileIndex = ProjectRootManager.getInstance(project).fileIndex
             val module = fileIndex.getModuleForFile(virtualFile) ?: return
+            // 不是此模块的内容下的文件或目录则执行
+            // 按道理应该会一直不执行？？？
             if (!ModuleRootManager.getInstance(module).fileIndex.isInContent(virtualFile)) {
-                println(virtualFile.url)
                 ModuleRootModificationUtil.addModuleLibrary(module, virtualFile.url)
             }
         }
