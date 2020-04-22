@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>com.luamas.idea.plugin.livetemplates</id>
+    <id>com.luamas.idea.plugin.module</id>
     <name>Basic Facet</name>
     <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
 
