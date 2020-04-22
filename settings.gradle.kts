@@ -1,17 +1,18 @@
 rootProject.name = "plugin-demo"
-include("hello-action")
-project(":hello-action").projectDir = file("01-hello-action")
-include("basic-action")
-project(":basic-action").projectDir = file("02-basic-action")
-include("editor-action")
-project(":editor-action").projectDir = file("03-editor-action")
-include("basic-facet")
-project(":basic-facet").projectDir = file("04-basic-facet")
-include("basic-framework")
-project(":basic-framework").projectDir = file("05-basic-framework")
-include("basic-inspection")
-project(":basic-inspection").projectDir = file("06-basic-inspection")
-include("live-templates")
-project(":live-templates").projectDir = file("07-live-templates")
-include("max-opened-projects")
-project(":max-opened-projects").projectDir = file("08-max-opened-projects")
+file(".")?.listFiles()?.filter {
+    val arr = it.name.split("-")
+    if (arr.size>1){
+        try {
+            arr[0].toInt()
+            true
+        }catch (_: NumberFormatException){
+            false
+        }
+    } else false
+
+}?.filter { it.isDirectory }?.forEach {
+    val projectName = it.name.substring(it.name.split("-")[0].length+1)
+    println(projectName)
+    include(projectName)
+    project(":$projectName").projectDir = it
+}
