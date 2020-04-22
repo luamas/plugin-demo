@@ -1,0 +1,11 @@
+<idea-plugin>
+    <id>com.luamas.idea.plugin.livetemplates</id>
+    <name>Basic Facet</name>
+    <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
+
+    <depends>com.intellij.modules.lang</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <defaultLiveTemplatesProvider implementation="com.luamas.idea.plugin.livetemplates.MarkdownTemplateProvider"/>
+        <liveTemplateContext implementation="com.luamas.idea.plugin.livetemplates.MarkdownContext"/>
+    </extensions>
+</idea-plugin>
