@@ -12,7 +12,7 @@ file(".")?.listFiles()?.filter {
 
 }?.filter { it.isDirectory }?.forEach {
     val projectName = it.name.substring(it.name.split("-")[0].length+1)
-    println(projectName)
+//    println(projectName)
     include(projectName)
     project(":$projectName").projectDir = it
 }
