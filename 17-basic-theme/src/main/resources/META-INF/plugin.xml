@@ -1,0 +1,11 @@
+<idea-plugin>
+    <id>com.luamas.idea.plugin.basictheme</id>
+    <name>Basic Theme</name>
+    <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <themeProvider id="eb9b7461-397b-4b98-a422-224fc0a74564" path="/theme_basics.theme.json"/>
+    </extensions>
+
+</idea-plugin>
