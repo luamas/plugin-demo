@@ -1,0 +1,13 @@
+<idea-plugin>
+    <id>com.luamas.idea.plugin.projectwizard</id>
+    <name>Project Wizard</name>
+    <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <moduleBuilder builderClass="com.luamas.idea.plugin.projectwizard.DemoModuleWizardStep"
+                       id="DEMO_STEP"
+                       order="first"/>
+    </extensions>
+
+</idea-plugin>
