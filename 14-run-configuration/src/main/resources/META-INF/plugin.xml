@@ -1,0 +1,11 @@
+<idea-plugin>
+    <id>com.luamas.idea.plugin.runconfiguration</id>
+    <name>Run Configuration</name>
+    <vendor email="myluamas@gmail.com" url="http://www.luamas.com">luamas</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <configurationType implementation="com.luamas.idea.plugin.runconfiguration.DemoRunConfigurationType"/>
+    </extensions>
+
+</idea-plugin>
